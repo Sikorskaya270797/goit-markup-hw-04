@@ -300,7 +300,8 @@ img {
   justify-content: center;
   flex-direction: row;
   align-items: center;
-  padding: 0px;
+
+  margin-bottom: 32px;
 }
 .team-icons-list {
   width: 40px;
@@ -312,7 +313,6 @@ img {
   border-radius: 50%;
   height: 100%;
   width: 100%;
-  margin-bottom: 32px;
 }
 
 .team-page-title {
