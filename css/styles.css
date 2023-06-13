@@ -87,8 +87,12 @@ img {
   text-transform: uppercase;
   color: var(--second-color);
 }
-.active {
+.header-menu-link{
   position: relative;
+  color: var(--text-color);
+transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.active {
   color: var(--text-color);
 }
 .active::after {
@@ -608,8 +612,8 @@ img {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.imagess-img:hover .hidden-text,
-.imagess-img:focus .hidden-text {
+.imagess-img:hover,
+.imagess-img:focus {
   border: 1px solid var(--footer-text-color);
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.88),
   0px 1px 1px rgba(46, 47, 66, 0.16),
@@ -712,10 +716,12 @@ img {
 .modal-btn:hover {
   background-color: var(--text-color);
   border: none;
+  fill: #ffffff;
 }
 .modal-btn:focus {
     background-color: var(--text-color);
   border: none;
+  fill: #ffffff;
 }
 .modal-icons {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); 
