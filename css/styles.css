@@ -575,7 +575,7 @@ img {
   gap: 48px 24px;
 }
 
-.images-item {
+.imagess-item {
   width: calc((100% - 24px) / 9);
 }
 .imagess-container {
@@ -599,31 +599,44 @@ img {
   color: var(--link-color);
 }
 
-.images-image {
+.imagess-image {
   position: relative;
   overflow: hidden;
 }
-.images-image:hover .overlay {
+.imagess-img {
+  display: block;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.imagess-img:hover .hidden-text,
+.imagess-img:focus .hidden-text {
+  border: 1px solid var(--footer-text-color);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.88),
+  0px 1px 1px rgba(46, 47, 66, 0.16),
+  0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.imagess-img:hover .hidden-text,
+.imagess-img:focus .hidden-text {
   transform: translate(0);
-  background-color: var(--accent-color);
 }
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transform: translateY(100%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+
+
 .hidden-text {
-  font-style: normal;
-  font-weight: 400;
+  position: absolute;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--footer-text-color);
+   background-color: var(--accent-color);
   padding: 40px 32px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition-property: transform;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /**-------------------FOOTER---------------------**/
 .footer-logo {
